@@ -16,8 +16,8 @@ struct LittleBigLabWebView: UIViewRepresentable {
         webView.backgroundColor = .black
 
         if let url = Bundle.main.url(
-            forResource: "little_big_lab",
-            withExtension: "html"
+          forResource: "Littlebiglab",
+             withExtension: "html"
         ) {
             webView.loadFileURL(
                 url,
