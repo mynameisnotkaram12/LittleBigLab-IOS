@@ -8,7 +8,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15-intel    steps:
+    runs-on: macos-15-intel    
+    steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
