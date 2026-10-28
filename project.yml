@@ -12,7 +12,7 @@ targets:
     platform: iOS
     sources:
       - path: Sources
-      - path: Littlebiglab.html
+      - path: little_big_lab 3.html
         buildPhase: resources
     settings:
       base:
