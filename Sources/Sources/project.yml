@@ -1,0 +1,22 @@
+
+name: LittleBigLab
+
+options:
+  bundleIdPrefix: com.littlebiglab
+  deploymentTarget:
+    iOS: "17.0"
+
+targets:
+  LittleBigLab:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: little_big_lab 3.html
+        buildPhase: resources
+        name: little_big_lab.html
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.littlebiglab.app
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "5.0"
