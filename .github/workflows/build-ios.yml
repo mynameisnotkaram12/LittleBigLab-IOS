@@ -1,5 +1,4 @@
 
-
 name: Build Little Big Lab
 
 on:
@@ -21,20 +20,20 @@ jobs:
       - name: Generate Xcode project
         run: xcodegen generate
 
-      - name: Build for iOS Simulator
+      - name: Build for iPad
         run: |
           xcodebuild \
             -project LittleBigLab.xcodeproj \
             -scheme LittleBigLab \
-            -sdk iphonesimulator \
-            -destination 'generic/platform=iOS Simulator' \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             build
 
-      - name: Upload app artifact
+      - name: Upload device build
         uses: actions/upload-artifact@v4
         with:
-          name: LittleBigLab-Simulator
-          path: build/Build/Products/Debug-iphonesimulator/LittleBigLab.app
+          name: LittleBigLab-Device
+          path: build/Build/Products/Debug-iphoneos/LittleBigLab.app
           if-no-files-found: error
